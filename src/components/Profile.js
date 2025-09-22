@@ -8,7 +8,7 @@ export default function Profile () {
   const loggedIn = useSelector(selectIsLoggedIn);
   
   // use loggedIn to return a Navigate
-  if (!loggedIn) {
+  if (!loggedIn && !currentUser) {
     return <Navigate to="/sign-up"/>
   }
 
